@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- grand cinma movies-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlix - Your Movie Destination</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Style.css">
+   
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-film me-2"></i> CineFlix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moviesSection">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#latestSection">Latest Releases</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#categoriesSection">All Categories</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Action</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Drama</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Horror</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Sci-Fi</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search movies...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="ms-3 d-flex">
+                    <a href="#" class="btn btn-outline-light me-2">Login</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <!-- Hero Carousel Section -->
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Movie 1 - Dune: Part Two -->
+        <div class="carousel-item active">
+            <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://miro.medium.com/v2/resize:fit:1400/1*SvqveyU-E2RAHPwHykl5YQ.jpeg') no-repeat center; background-size: cover;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 fw-bold mb-3">Dune: Part Two</h1>
+                            <p class="lead mb-4">The saga continues as Paul Atreides unites with Chani and the Fremen to seek revenge against the conspirators who destroyed his family.</p>
+                            <div class="d-flex mb-4">
+                                <span class="badge bg-warning text-dark me-2">Sci-Fi</span>
+                                <span class="badge bg-warning text-dark me-2">Adventure</span>
+                                <span class="badge bg-warning text-dark me-2">Drama</span>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-primary btn-lg me-3 mb-2">
+                                    <i class="fas fa-play me-2"></i> Watch Trailer
+                                </a>
+                                <a href="#" class="btn btn-outline-light btn-lg mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Movie 2 - Oppenheimer -->
+        <div class="carousel-item">
+            <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.gardenofmemory.net/content/images/size/w2000/2023/07/oppenheimer-header.jpg') no-repeat center; background-size: cover;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 fw-bold mb-3">Oppenheimer</h1>
+                            <p class="lead mb-4">The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+                            <div class="d-flex mb-4">
+                                <span class="badge bg-danger me-2">Biography</span>
+                                <span class="badge bg-warning text-dark me-2">Drama</span>
+                                <span class="badge bg-info me-2">History</span>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-primary btn-lg me-3 mb-2">
+                                    <i class="fas fa-play me-2"></i> Watch Trailer
+                                </a>
+                                <a href="#" class="btn btn-outline-light btn-lg mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Movie 3 - The Batman -->
+        <div class="carousel-item">
+            <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.bauerhosting.com/legacy/media/621c/fad9/92ff/e9ad/1afa/138c/batman-1.jpg') no-repeat center; background-size: cover;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 fw-bold mb-3">The Batman</h1>
+                            <p class="lead mb-4">When the Riddler begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.</p>
+                            <div class="d-flex mb-4">
+                                <span class="badge bg-dark me-2">Action</span>
+                                <span class="badge bg-secondary me-2">Crime</span>
+                                <span class="badge bg-warning text-dark me-2">Drama</span>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-primary btn-lg me-3 mb-2">
+                                    <i class="fas fa-play me-2"></i> Watch Trailer
+                                </a>
+                                <a href="#" class="btn btn-outline-light btn-lg mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Movie 4 - Everything Everywhere All at Once -->
+        <div class="carousel-item">
+            <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://m.media-amazon.com/images/M/MV5BZjM0MDFmZDctNmFjMi00MzM2LWJlYmItMzk2MTJlZDI1ZGRkXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg') no-repeat center; background-size: cover;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 fw-bold mb-3">Everything Everywhere All at Once</h1>
+                            <p class="lead mb-4">An aging Chinese immigrant is swept up in an insane adventure where she alone can save the world by exploring other universes.</p>
+                            <div class="d-flex mb-4">
+                                <span class="badge bg-purple me-2">Sci-Fi</span>
+                                <span class="badge bg-pink me-2">Adventure</span>
+                                <span class="badge bg-indigo me-2">Comedy</span>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-primary btn-lg me-3 mb-2">
+                                    <i class="fas fa-play me-2"></i> Watch Trailer
+                                </a>
+                                <a href="#" class="btn btn-outline-light btn-lg mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Movie 5 - Killers of the Flower Moon -->
+        <div class="carousel-item">
+            <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://m.media-amazon.com/images/M/MV5BZWY5ZDVjNTUtODI5Yy00MjFhLWEyM2EtYzZjM2VjZTI0MTBjXkEyXkFqcGc@._V1_.jpg') no-repeat center; background-size: cover;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 fw-bold mb-3">Killers of the Flower Moon</h1>
+                            <p class="lead mb-4">Members of the Osage tribe are murdered under mysterious circumstances in the 1920s, sparking a major F.B.I. investigation.</p>
+                            <div class="d-flex mb-4">
+                                <span class="badge bg-brown me-2">Crime</span>
+                                <span class="badge bg-warning text-dark me-2">Drama</span>
+                                <span class="badge bg-info me-2">History</span>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-primary btn-lg me-3 mb-2">
+                                    <i class="fas fa-play me-2"></i> Watch Trailer
+                                </a>
+                                <a href="#" class="btn btn-outline-light btn-lg mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</section>
+
+<section id="moviesSection" class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-heading">Trending Movies</h2>
+            <a href="#" class="btn btn-outline-dark">View All</a>
+        </div>
+        <div class="row">
+            <!-- Movie Card 1 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ07FsMbdqh6L1BjaAYnJWJMKST9OlJvVTvtA&s" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.7
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Oppenheimer (2023)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Christopher Nolan</span></li>
+                                <li><span>Cast:</span> <span>Cillian Murphy, Emily Blunt, Robert Downey Jr.</span></li>
+                                <li><span>Genre:</span> <span>Biography, Drama, History</span></li>
+                                <li><span>Runtime:</span> <span>180 min</span></li>
+                            </ul>
+                            <p>The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Oppenheimer</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2023</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 180 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 2 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 7.9
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>The Batman (2022)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Matt Reeves</span></li>
+                                <li><span>Cast:</span> <span>Robert Pattinson, Zoë Kravitz, Jeffrey Wright</span></li>
+                                <li><span>Genre:</span> <span>Action, Crime, Drama</span></li>
+                                <li><span>Runtime:</span> <span>176 min</span></li>
+                            </ul>
+                            <p>When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Batman</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2022</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 176 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 3 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/1e/Everything_Everywhere_All_at_Once.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.2
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Everything Everywhere All at Once (2022)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Daniel Kwan, Daniel Scheinert</span></li>
+                                <li><span>Cast:</span> <span>Michelle Yeoh, Stephanie Hsu, Ke Huy Quan</span></li>
+                                <li><span>Genre:</span> <span>Action, Adventure, Comedy</span></li>
+                                <li><span>Runtime:</span> <span>139 min</span></li>
+                            </ul>
+                            <p>A middle-aged Chinese immigrant is swept up into an insane adventure where she alone can save existence by exploring other universes and connecting with the lives she could have led.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Everything Everywhere All at Once</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2022</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 139 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 4 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiis_xjmEqBxaAjKRQF3z6Al8ShiHl8CvTlg&s" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 7.8
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Top Gun: Maverick (2022)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Joseph Kosinski</span></li>
+                                <li><span>Cast:</span> <span>Tom Cruise, Jennifer Connelly, Miles Teller</span></li>
+                                <li><span>Genre:</span> <span>Action, Drama</span></li>
+                                <li><span>Runtime:</span> <span>130 min</span></li>
+                            </ul>
+                            <p>After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Top Gun: Maverick</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2022</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 130 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="moviesSection" class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-heading">Trending Movies</h2>
+            <a href="#" class="btn btn-outline-dark">View All</a>
+        </div>
+        <div class="row">
+            <!-- Movie Card 1 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.5
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Dune: Part Two (2024)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Denis Villeneuve</span></li>
+                                <li><span>Cast:</span> <span>Timothée Chalamet, Zendaya, Rebecca Ferguson</span></li>
+                                <li><span>Genre:</span> <span>Sci-Fi, Adventure, Drama</span></li>
+                                <li><span>Runtime:</span> <span>166 min</span></li>
+                            </ul>
+                            <p>Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the universe, he must prevent a terrible future only he can foresee.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dune: Part Two</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2024</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 166 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 2 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg0MDgwNjc5N15BMl5BanBnXkFtZTcwNjMxNDY3Mw@@._V1_QL75_UX216_.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.9
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>The Shawshank Redemption (1994)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Frank Darabont</span></li>
+                                <li><span>Cast:</span> <span>Tim Robbins, Morgan Freeman, Bob Gunton</span></li>
+                                <li><span>Genre:</span> <span>Drama</span></li>
+                                <li><span>Runtime:</span> <span>142 min</span></li>
+                            </ul>
+                            <p>Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Shawshank Redemption</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">1994</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 142 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 3 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzU5NWFiZDMtYzE5OC00MDdkLThjNDktZDZkMWQ3ZGM1MWY1XkEyXkFqcGc@._V1_QL75_UX244.5_.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.3
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Parasite (2019)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Bong Joon Ho</span></li>
+                                <li><span>Cast:</span> <span>Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong</span></li>
+                                <li><span>Genre:</span> <span>Drama, Thriller</span></li>
+                                <li><span>Runtime:</span> <span>132 min</span></li>
+                            </ul>
+                            <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Parasite</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2019</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 132 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Card 4 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card movie-card">
+                    <div class="position-relative">
+                        <img src="https://th.bing.com/th/id/OIP.b8WjJA8J2IJgblXaSliy3QHaLH?w=126&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Movie Poster">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.4
+                        </div>
+                        <!-- Hover Profile Overlay -->
+                        <div class="movie-overlay">
+                            <h4>Inception (2010)</h4>
+                            <ul class="movie-info-list">
+                                <li><span>Director:</span> <span>Christopher Nolan</span></li>
+                                <li><span>Cast:</span> <span>Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page</span></li>
+                                <li><span>Genre:</span> <span>Sci-Fi, Action, Adventure</span></li>
+                                <li><span>Runtime:</span> <span>148 min</span></li>
+                            </ul>
+                            <p>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                            <button class="btn btn-watch text-white mt-2"><i class="fas fa-play me-2"></i>Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Inception</h5>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">2010</span>
+                            <span>
+                                <i class="fas fa-clock me-1"></i> 148 min
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Categories Section -->
+    <section id="categoriesSection" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading mb-4">Browse by Category</h2>
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-running fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Action</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-laugh-beam fa-3x mb-3 text-warning"></i>
+                            <h5 class="card-title">Comedy</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-theater-masks fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">Drama</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-ghost fa-3x mb-3 text-dark"></i>
+                            <h5 class="card-title">Horror</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-rocket fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">Sci-Fi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-heart fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">Romance</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Movie Carousel -->
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="4"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <!-- Dune: Part Two -->
+            <div class="carousel-item active">
+                <div class="video-container">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Way9Dexny3w?autoplay=0&mute=1&loop=1&controls=0&showinfo=0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Dune: Part Two</h2>
+                    <p>The saga continues as Paul Atreides unites with Chani and the Fremen to seek revenge against the conspirators who destroyed his family.</p>
+                    <a href="https://www.youtube.com/watch?v=Way9Dexny3w" target="_blank" class="btn btn-primary">Watch Full Trailer</a>
+                </div>
+            </div>
+            
+            <!-- Oppenheimer -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uYPbbksJxIg?autoplay=0&mute=1&loop=1&controls=0&showinfo=0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Oppenheimer</h2>
+                    <p>The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+                    <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank" class="btn btn-primary">Watch Full Trailer</a>
+                </div>
+            </div>
+            
+            <!-- The Batman -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mqqft2x_Aa4?autoplay=0&mute=1&loop=1&controls=0&showinfo=0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>The Batman</h2>
+                    <p>When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.</p>
+                    <a href="https://www.youtube.com/watch?v=mqqft2x_Aa4" target="_blank" class="btn btn-primary">Watch Full Trailer</a>
+                </div>
+            </div>
+            
+            <!-- Everything Everywhere All at Once -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wxN1T1uxQ2g?autoplay=0&mute=1&loop=1&controls=0&showinfo=0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Everything Everywhere All at Once</h2>
+                    <p>An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes.</p>
+                    <a href="https://www.youtube.com/watch?v=wxN1T1uxQ2g" target="_blank" class="btn btn-primary">Watch Full Trailer</a>
+                </div>
+            </div>
+            
+            <!-- Killers of the Flower Moon -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EP34Yoxs3FQ?autoplay=0&mute=1&loop=1&controls=0&showinfo=0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Killers of the Flower Moon</h2>
+                    <p>Members of the Osage tribe in the United States are murdered under mysterious circumstances in the 1920s, sparking a major F.B.I. investigation.</p>
+                    <a href="https://www.youtube.com/watch?v=EP34Yoxs3FQ" target="_blank" class="btn btn-primary">Watch Full Trailer</a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script>
+        // Pause videos when not active
+        document.addEventListener('DOMContentLoaded', function() {
+            var carousel = document.getElementById('movieCarousel');
+            
+            carousel.addEventListener('slide.bs.carousel', function (e) {
+                var iframes = document.querySelectorAll('.video-container iframe');
+                iframes.forEach(function(iframe) {
+                    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+            });
+        });
+    </script>
+    <!-- Cast Section -->
+<!-- Cast Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-heading mb-4">Top Cast</h2>
+        <div class="row g-4">
+            <!-- Actor 1 - Cillian Murphy -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal1">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNWJjYjMzMTQtY2I2NS00YjJlLTg4YzAtNDBlZWQzNzVhMDkxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Cillian Murphy" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Cillian Murphy</h5>
+                    <p class="text-muted small">J. Robert Oppenheimer</p>
+                </div>
+            </div>
+            
+            <!-- Actor 2 - Matt Damon -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal2">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_FMjpg_UX1000_.jpg" alt="Matt Damon" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Matt Damon</h5>
+                    <p class="text-muted small">Leslie Groves</p>
+                </div>
+            </div>
+            
+            <!-- Actor 3 - Alden Ehrenreich -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal3">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNjY5ODY0MDE5Nl5BMl5BanBnXkFtZTgwODg2NDM4ODE@._V1_.jpg" alt="Alden Ehrenreich" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Alden Ehrenreich</h5>
+                    <p class="text-muted small">Senate Aide</p>
+                </div>
+            </div>
+            
+            <!-- Actor 4 - Jason Clarke -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal4">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzU5ODU0MzY1MV5BMl5BanBnXkFtZTcwMTY2MDE4OA@@._V1_.jpg" alt="Jason Clarke" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Jason Clarke</h5>
+                    <p class="text-muted small">Roger Robb</p>
+                </div>
+            </div>
+            
+            <!-- Actor 5 - Tony Goldwyn -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal5">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTk3NTI3ODgwM15BMl5BanBnXkFtZTgwMjM2NTE2NzE@._V1_FMjpg_UX1000_.jpg" alt="Tony Goldwyn" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Tony Goldwyn</h5>
+                    <p class="text-muted small">Gordon Gray</p>
+                </div>
+            </div>
+            
+            <!-- Actor 6 - Emily Blunt -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal6">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTUxNDY4MTMzM15BMl5BanBnXkFtZTcwMjg5NzM2Ng@@._V1_FMjpg_UX1000_.jpg" alt="Emily Blunt" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Emily Blunt</h5>
+                    <p class="text-muted small">Kitty Oppenheimer</p>
+                </div>
+            </div>
+            
+            <!-- Actor 7 - Robert Downey Jr. -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal7">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg" alt="Robert Downey Jr." class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Robert Downey Jr.</h5>
+                    <p class="text-muted small">Lewis Strauss</p>
+                </div>
+            </div>
+            
+            <!-- Actor 8 - Scott Grimes -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal8">
+                    <div class="cast-photo mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJCa1BlHJg4T3W_OrTpMp0S8hWeZk-a-31A&s" alt="Scott Grimes" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Scott Grimes</h5>
+                    <p class="text-muted small">Counsel</p>
+                </div>
+            </div>
+            
+            <!-- Actor 9 - Kurt Koehler -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal9">
+                    <div class="cast-photo mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsyj-QT4GKkmREyImHve47dmmiXp_8ysrTQ&s" alt="Kurt Koehler" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Kurt Koehler</h5>
+                    <p class="text-muted small">Thomas Morgan</p>
+                </div>
+            </div>
+            
+            <!-- Actor 10 - John Gowans -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal10">
+                    <div class="cast-photo mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nVIp5U0V-_TO2kxzujJgXVf0ElhdPiWpQw&s" alt="John Gowans" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">John Gowans</h5>
+                    <p class="text-muted small">Ward Evans</p>
+                </div>
+            </div>
+            
+            <!-- Actor 11 - Katy Perry -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal11">
+                    <div class="cast-photo mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjE4MDI3NDI2Nl5BMl5BanBnXkFtZTcwNjE5OTQwOA@@._V1_FMjpg_UX1000_.jpg" alt="Katy Perry" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Katy Perry</h5>
+                    <p class="text-muted small">Part of Me</p>
+                </div>
+            </div>
+            
+            <!-- Actor 12 - Emma Watson -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="cast-card text-center" data-bs-toggle="modal" data-bs-target="#actorModal12">
+                    <div class="cast-photo mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRksOe7t7otntnuMKN0Q9zxFMu46nhr4xe9Ug&s" alt="Emma Watson" class="img-fluid rounded-circle shadow">
+                    </div>
+                    <h5 class="mb-1">Emma Watson</h5>
+                    <p class="text-muted small">Colonia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Actor Modals -->
+<!-- Modal 1 - Cillian Murphy -->
+<div class="modal fade" id="actorModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cillian Murphy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNWJjYjMzMTQtY2I2NS00YjJlLTg4YzAtNDBlZWQzNzVhMDkxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Cillian Murphy">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As J. Robert Oppenheimer</h6>
+                        <p><strong>Born:</strong> May 25, 1976 (age 47) in Douglas, Ireland</p>
+                        <p>Cillian Murphy is an Irish actor known for his intense performances. He won an Academy Award for his portrayal of J. Robert Oppenheimer in Christopher Nolan's biopic.</p>
+                        <p><strong>Notable Works:</strong> 28 Days Later, Peaky Blinders, Inception, The Dark Knight Trilogy</p>
+                        <p><strong>Fun Fact:</strong> Originally studied law before pursuing acting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 - Matt Damon -->
+<div class="modal fade" id="actorModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Matt Damon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Matt Damon">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Leslie Groves</h6>
+                        <p><strong>Born:</strong> October 8, 1970 (age 52) in Cambridge, Massachusetts, USA</p>
+                        <p>Matthew Paige Damon is an American actor, producer, and screenwriter. He gained fame with Good Will Hunting which he co-wrote with Ben Affleck, winning an Academy Award for Best Original Screenplay.</p>
+                        <p><strong>Notable Works:</strong> The Bourne series, The Martian, Ocean's Trilogy, Saving Private Ryan</p>
+                        <p><strong>Fun Fact:</strong> Dropped out of Harvard just 12 credits short of graduating.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 - Alden Ehrenreich -->
+<div class="modal fade" id="actorModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Alden Ehrenreich</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNjY5ODY0MDE5Nl5BMl5BanBnXkFtZTgwODg2NDM4ODE@._V1_.jpg" class="img-fluid rounded mb-3" alt="Alden Ehrenreich">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Senate Aide</h6>
+                        <p><strong>Born:</strong> November 22, 1989 (age 33) in Los Angeles, California, USA</p>
+                        <p>Alden Ehrenreich is an American actor best known for playing Han Solo in Solo: A Star Wars Story. He's worked with directors like Francis Ford Coppola and the Coen Brothers.</p>
+                        <p><strong>Notable Works:</strong> Solo: A Star Wars Story, Hail Caesar!, Beautiful Creatures</p>
+                        <p><strong>Fun Fact:</strong> Was discovered by Steven Spielberg at a bat mitzvah.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 - Jason Clarke -->
+<div class="modal fade" id="actorModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Jason Clarke</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzU5ODU0MzY1MV5BMl5BanBnXkFtZTcwMTY2MDE4OA@@._V1_.jpg" class="img-fluid rounded mb-3" alt="Jason Clarke">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Roger Robb</h6>
+                        <p><strong>Born:</strong> July 17, 1969 (age 53) in Winton, Queensland, Australia</p>
+                        <p>Jason Clarke is an Australian actor known for his intense character work in both film and television. He often plays authoritative or military figures.</p>
+                        <p><strong>Notable Works:</strong> Zero Dark Thirty, Dawn of the Planet of the Apes, Mudbound, Pet Sematary</p>
+                        <p><strong>Fun Fact:</strong> Originally studied economics before switching to acting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 - Tony Goldwyn -->
+<div class="modal fade" id="actorModal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tony Goldwyn</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTk3NTI3ODgwM15BMl5BanBnXkFtZTgwMjM2NTE2NzE@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Tony Goldwyn">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Gordon Gray</h6>
+                        <p><strong>Born:</strong> May 20, 1960 (age 63) in Los Angeles, California, USA</p>
+                        <p>Anthony Howard Goldwyn is an American actor, director, and producer. He comes from Hollywood royalty as the grandson of movie mogul Samuel Goldwyn.</p>
+                        <p><strong>Notable Works:</strong> Scandal, Ghost, The Last Samurai, Divergent series</p>
+                        <p><strong>Fun Fact:</strong> Directed several episodes of TV shows like Dexter and Grey's Anatomy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6 - Emily Blunt -->
+<div class="modal fade" id="actorModal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Emily Blunt</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTUxNDY4MTMzM15BMl5BanBnXkFtZTcwMjg5NzM2Ng@@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Emily Blunt">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Kitty Oppenheimer</h6>
+                        <p><strong>Born:</strong> February 23, 1983 (age 40) in London, England</p>
+                        <p>Emily Olivia Leah Blunt is a British-American actress known for her versatility across genres. She's received multiple awards including a Golden Globe and SAG Award.</p>
+                        <p><strong>Notable Works:</strong> The Devil Wears Prada, A Quiet Place, Sicario, Mary Poppins Returns</p>
+                        <p><strong>Fun Fact:</strong> Had a stutter as a child that she overcame through acting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 7 - Robert Downey Jr. -->
+<div class="modal fade" id="actorModal7" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Robert Downey Jr.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Robert Downey Jr.">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Lewis Strauss</h6>
+                        <p><strong>Born:</strong> April 4, 1965 (age 58) in New York City, USA</p>
+                        <p>Robert John Downey Jr. is an American actor known for his charismatic performances. He's one of the highest-paid actors in the world, best known as Iron Man in the MCU.</p>
+                        <p><strong>Notable Works:</strong> Iron Man, Sherlock Holmes, Chaplin, Tropic Thunder</p>
+                        <p><strong>Fun Fact:</strong> Made his acting debut at age 5 in his father's film Pound.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 8 - Scott Grimes -->
+<div class="modal fade" id="actorModal8" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Scott Grimes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJCa1BlHJg4T3W_OrTpMp0S8hWeZk-a-31A&s" class="img-fluid rounded mb-3" alt="Scott Grimes">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Counsel</h6>
+                        <p><strong>Born:</strong> July 9, 1971 (age 51) in Lowell, Massachusetts, USA</p>
+                        <p>Scott Christopher Grimes is an American actor and singer. He's known for his long-running role as Dr. Archie Morris on ER and as Steve Smith in American Dad!.</p>
+                        <p><strong>Notable Works:</strong> ER, American Dad!, The Orville, Band of Brothers</p>
+                        <p><strong>Fun Fact:</strong> Provided the singing voice for Disney's Robin Hood in the 1973 animated film.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 9 - Kurt Koehler -->
+<div class="modal fade" id="actorModal9" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Kurt Koehler</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsyj-QT4GKkmREyImHve47dmmiXp_8ysrTQ&s" class="img-fluid rounded mb-3" alt="Kurt Koehler">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Thomas Morgan</h6>
+                        <p><strong>Born:</strong> June 23, 1962 (age 60) in New York City, USA</p>
+                        <p>Kurt Koehler is an American actor known for his character roles in film and television. He's appeared in numerous TV shows and films over his long career.</p>
+                        <p><strong>Notable Works:</strong> Star Trek: Voyager, JAG, The West Wing, The Closer</p>
+                        <p><strong>Fun Fact:</strong> Has a background in theater and has performed in many stage productions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 10 - John Gowans -->
+<div class="modal fade" id="actorModal10" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">John Gowans</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nVIp5U0V-_TO2kxzujJgXVf0ElhdPiWpQw&s" class="img-fluid rounded mb-3" alt="John Gowans">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Ward Evans</h6>
+                        <p><strong>Born:</strong> (Information not widely available)</p>
+                        <p>John Gowans is an actor known for his supporting roles in films and television shows. He often plays authoritative or professional characters.</p>
+                        <p><strong>Notable Works:</strong> Oppenheimer, The Good Wife, Madam Secretary</p>
+                        <p><strong>Fun Fact:</strong> Has a background in theater and has appeared in many stage productions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 11 - Katy Perry -->
+<div class="modal fade" id="actorModal11" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Katy Perry</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjE4MDI3NDI2Nl5BMl5BanBnXkFtZTcwNjE5OTQwOA@@._V1_FMjpg_UX1000_.jpg" class="img-fluid rounded mb-3" alt="Katy Perry">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Part of Me</h6>
+                        <p><strong>Born:</strong> October 25, 1984 (age 38) in Santa Barbara, California, USA</p>
+                        <p>Katheryn Elizabeth Hudson, known professionally as Katy Perry, is an American singer, songwriter, and television personality. She's one of the best-selling music artists of all time.</p>
+                        <p><strong>Notable Works:</strong> "I Kissed a Girl", "Teenage Dream", "Roar", American Idol judge</p>
+                        <p><strong>Fun Fact:</strong> Began her career singing gospel music under her birth name Katy Hudson.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 12 - Emma Watson -->
+<div class="modal fade" id="actorModal12" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Emma Watson</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRksOe7t7otntnuMKN0Q9zxFMu46nhr4xe9Ug&s" class="img-fluid rounded mb-3" alt="Emma Watson">
+                    </div>
+                    <div class="col-md-8">
+                        <h6>As Colonia</h6>
+                        <p><strong>Born:</strong> April 15, 1990 (age 33) in Paris, France</p>
+                        <p>Emma Charlotte Duerre Watson is a British actress and activist. She rose to prominence playing Hermione Granger in the Harry Potter film series.</p>
+                        <p><strong>Notable Works:</strong> Harry Potter series, Beauty and the Beast, Little Women</p>
+                        <p><strong>Fun Fact:</strong> Served as a UN Women Goodwill Ambassador and helped launch the HeForShe campaign.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- More to Explore Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4">More to Explore</h2>
+        
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs mb-4" id="exploreTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos" type="button" role="tab">Photos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="videos-tab" data-bs-toggle="tab" data-bs-target="#videos" type="button" role="tab">Videos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab">News</button>
+            </li>
+        </ul>
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id="exploreTabsContent">
+            <!-- Photos Tab -->
+            <div class="tab-pane fade show active" id="photos" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMjAyNzQyNDQzM15BMl5BanBnXkFtZTgwMzU2MjU0NzE@._V1_FMjpg_UX1000_.jpg" class="card-img-topp" alt="Gallery photo">
+                           
+                            <div class="card-body">
+                                <h5 class="card-title">Behind the Scenes</h5>
+                                <p class="card-text text-muted">Exclusive production photos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMjM4MjE3NDM5NF5BMl5BanBnXkFtZTgwNjYwMDY3NDM@._V1_QL75_UX468_.jpg" class="card-img-topp" alt="Gallery photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Tomb Raider</h5>
+                                <p class="card-text text-muted"> Lara Croft</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYmFmYjBiYjQtNDA3NS00ZTA5LTliNmEtNmExYTc2MDJiMmZlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-topp" alt="Gallery photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Isabela Merced</h5>
+                                <p class="card-text text-muted">Actress
+                                    Music Department
+                                    Soundtrack</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://m.media-amazon.com/images/M/MV5BODJhOWI3OTUtZjkxZS00ZTFjLTg1YWUtMjkyNzZjOGQ0ZDFhXkEyXkFqcGdeQWRpZWdtb25n._V1_QL75_UX500_CR0,0,500,281_.jpg" class="card-img-topp" alt="Gallery photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Kaitlyn Dever</h5>
+                                <p class="card-text text-muted">Actress
+                                    Producer
+                                    Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2HEIsH99mEcUAy0nQA1IFRV6hgZ98IQODw&s" class="card-img-topp" alt="Gallery photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Emma Corrin</h5>
+                                <p class="card-text text-muted">Actress
+                                    Music Department
+                                    Producer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZjIyNmFiYzYtMmJhNy00NzE1LWI5MzEtYjc2ZTcwNDBkNmYzXkEyXkFqcGc@._V1_QL75_UY281_CR31,0,500,281_.jpg" class="card-img-topp" alt="Gallery photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Nicky Katt</h5>
+                                <p class="card-text text-muted">Actor
+                                    Producer
+                                    Talent Agent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="videos" role="tabpanel">
+                <div class="row">
+                    <!-- Video 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" 
+                                        title="YouTube video" 
+                                        allowfullscreen
+                                        class="rounded-top"></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Official Trailer</h5>
+                                <p class="card-text text-muted">Watch the thrilling official trailer</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2:35</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Watch Full</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/Way9Dexny3w" 
+                                        title="YouTube video" 
+                                        allowfullscreen
+                                        class="rounded-top"></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Behind the Scenes</h5>
+                                <p class="card-text text-muted">Exclusive making-of featurette</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">5:12</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Watch Full</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           <!-- News Tab -->
+<div class="tab-pane fade" id="news" role="tabpanel">
+    <div class="row">
+        <!-- News 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <img src="https://images.bauerhosting.com/empire/2025/04/Enola-Holmes-3.jpeg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" class="card-img-top" alt="News image">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Exclusive</span>
+                    <h5 class="card-title">Enola Holmes 3, From Adolescence Director-Writer Duo Philip Barantini & Jack Thorne, Is Now Shooting</h5>
+                    <p class="card-text text-muted">The game is, once again, afoot! Having enamoured fans with her portrayal of...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">April 15, 2025</small>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- News 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+               <img src="https://images.bauerhosting.com/empire/2025/04/Sarah-Michelle-Gellar-Elijah-Wood-David-Cronenberg.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" class="card-img-top" alt="News image">
+                <div class="card-body">
+                    <span class="badge bg-success mb-2">Interview</span>
+                    <h5 class="card-title">Ready Or Not Sequel Adds Sarah Michelle Gellar, Elijah Wood, And David Cronenberg To Cast</h5>
+                    <p class="card-text text-muted">Ready or not, here some exciting casting announcements come! Following news...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">April 10, 2025</small>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- News 3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <img src="https://images.bauerhosting.com/empire/2025/04/the-roses.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" class="card-img-top" alt="News image">
+                <div class="card-body">
+                    <span class="badge bg-warning text-dark mb-2">Awards</span>
+                    <h5 class="card-title">Benedict Cumberbatch And Olivia Colman Are A Warring Couple In The Roses Trailer</h5>
+                    <p class="card-text text-muted">Benedict Cumberbatch is an actor known for playing all kinds of roles –.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">April 5, 2025</small>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- View All Link -->
+        <div class="text-end mt-3">
+            <a href="#" class="btn btn-outline-primary">View All</a>
+        </div>
+    </div>
+</section>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="fw-bold mb-2">Editorial lists</h1>
+            <p class="text-secondary mb-4">Related lists created by IMDb editors</p>
+            
+            <div class="list-group">
+                <!-- List Item 1 -->
+                <div class="list-card card mb-3">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Oscars Best Picture Winners, Ranked</h5>
+                                <p class="card-text text-secondary small">updated 1 month ago • 98 titles</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Vib-6mJapqDL2lRvq2S7smUteNr0Kh0jhA&s" class="list-image rounded-end" alt="Movie poster">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List Item 2 -->
+                <div class="list-card card mb-3">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Top 100 Movies Bucket List</h5>
+                                <p class="card-text text-secondary small">updated 9 months ago • 100 titles</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZmU1YzU0NzEtMWE3OC00N2M3LTliOWMtZDRhNjU2YjlkMTZhXkEyXkFqcGc@._V1_QL75_UX262.5_.jpg" class="list-image rounded-end" alt="Movie poster">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List Item 3 -->
+                <div class="list-card card mb-3">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">What's New on Prime Video in June 2024</h5>
+                                <p class="card-text text-secondary small">updated 10 months ago • 148 titles</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTk4NjU5MTkyM15BMl5BanBnXkFtZTcwNTQ1NzExOQ@@._V1_QL75_UX217.5_.jpg" class="list-image rounded-end" alt="Movie poster">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List Item 4 -->
+                <div class="list-card card mb-3">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Christopher Nolan Movies Ranked by IMDb Rating</h5>
+                                <p class="card-text text-secondary small">updated 1 year ago • 12 titles</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTAxNzI0NDE1NF5BMl5BanBnXkFtZTcwNjczMTk2Mw@@._V1_QL75_UX490.5_.jpg" class="list-image rounded-end" alt="Movie poster">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List Item 5 -->
+                <div class="list-card card mb-3">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">IMDb Staff's 2024 Oscar Predictions</h5>
+                                <p class="card-text text-secondary small">updated 1 year ago • 24 titles</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNjUxM2MxZmMtZDA2My00NjI5LTkyN2YtZTNmZDI4Y2U2ZTAzXkEyXkFqcGc@._V1_QL75_UX1230_.jpg" class="list-image rounded-end" alt="Movie poster">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- Latest Releases Section -->
+    <section id="latestSection" class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-heading">Latest Releases</h2>
+                <a href="#" class="btn btn-outline-dark">View All</a>
+            </div>
+            <div class="row">
+                <!-- Movie Card 1 -->
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="card movie-card">
+                        <div class="position-relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Movie Poster">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 8.4
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">The Marvels</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">2023</span>
+                                <span>
+                                    <i class="fas fa-clock me-1"></i> 105 min
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 2 -->
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="card movie-card">
+                        <div class="position-relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZGQ1NGUxNDUtNjg3Yi00ZTZjLWIwOTUtNDBjYWY5ZjVmZGI4XkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Movie Poster">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 7.6
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Napoleon</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">2023</span>
+                                <span>
+                                    <i class="fas fa-clock me-1"></i> 158 min
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 3 -->
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="card movie-card">
+                        <div class="position-relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Killers_of_the_Flower_Moon_film_poster.jpg/250px-Killers_of_the_Flower_Moon_film_poster.jpg" class="card-img-top" alt="Movie Poster">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 8.1
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Killers of the Flower Moon</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">2023</span>
+                                <span>
+                                    <i class="fas fa-clock me-1"></i> 206 min
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 4 -->
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="card movie-card">
+                        <div class="position-relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BM2Y1N2ZhNjctYjVhZC00MDg2LWFhNTItMzI3ZjAwZDhjYmFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Movie Poster">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 7.5
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wonka</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">2023</span>
+                                <span>
+                                    <i class="fas fa-clock me-1"></i> 116 min
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2>Stay Updated</h2>
+                    <p class="lead">Subscribe to our newsletter for the latest movie updates and exclusive offers.</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white">CineFlix</h5>
+                    <p>Your ultimate destination for movies and TV shows. Watch anywhere, anytime.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Home</a></li>
+                        <li><a href="#moviesSection" class="text-white-50">Movies</a></li>
+                        <li><a href="#latestSection" class="text-white-50">Latest Releases</a></li>
+                        <li><a href="#categoriesSection" class="text-white-50">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#categoriesSection" class="text-white-50">Action</a></li>
+                        <li><a href="#categoriesSection" class="text-white-50">Comedy</a></li>
+                        <li><a href="#categoriesSection" class="text-white-50">Drama</a></li>
+                        <li><a href="#categoriesSection" class="text-white-50">Horror</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50"><i class="fas fa-map-marker-alt me-2"></i>Lebanon</li>
+                        <li class="text-white-50"><i class="fas fa-phone me-2"></i> +96178/846785</li>
+                        <li class="text-white-50"><i class="fas fa-envelope me-2"></i> cineflix.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 CineFlix. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 me-3">Terms of Service</a>
+                    <a href="#" class="text-white-50">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Offset for fixed navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
