@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CineFlix Movies Signup Page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlix - Sign Up</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: #fff;
+        }
+        
+        .signup-container {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(33, 37, 41, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-control, .form-select {
+            background-color: #2b3035;
+            border-color: #495057;
+            color: #fff;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background-color: #2b3035;
+            color: #fff;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        
+        .form-label {
+            color: #e9ecef;
+        }
+        
+        .btn-primary {
+            background-color: #e50914;
+            border-color: #e50914;
+        }
+        
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #b81d24;
+            border-color: #b81d24;
+        }
+        
+        .logo-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .form-text {
+            color: #adb5bd;
+        }
+        
+        .banner-image {
+            height: 250px;
+            background-image: url('/api/placeholder/1200/250');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .login-link {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
+        .signup-header {
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group-text {
+            background-color: #2b3035;
+            border-color: #495057;
+            color: #fff;
+        }
+
+        /* Navbar styles to match main page */
+        .navbar {
+            padding: 0.8rem 0;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffffff;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #ffffff;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-film me-2"></i> CineFlix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#moviesSection">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#latestSection">Latest Releases</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">All Categories</a></li>
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">Action</a></li>
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">Comedy</a></li>
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">Drama</a></li>
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">Horror</a></li>
+                            <li><a class="dropdown-item" href="index.html#categoriesSection">Sci-Fi</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search movies...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="ms-3 d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="#" class="btn btn-primary active">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-image d-flex align-items-center justify-content-center">
+                    <h1 class="display-4 text-white text-center">Join CineFlix Today</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-container">
+            <div class="logo-container">
+                <i class="fas fa-film fa-3x mb-2"></i>
+                <h2 class="signup-header">Create Your CineFlix Account</h2>
+            </div>
+            
+            <form id="signupForm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                        <div class="invalid-feedback">Please enter your first name.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                        <div class="invalid-feedback">Please enter your last name.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <div class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" id="username" required>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" id="password" required>
+                        <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                    </div>
+                    <div class="form-text">Password must be at least 8 characters long and include a mix of letters and numbers.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                        <div class="invalid-feedback">Passwords do not match.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="favoriteGenre" class="form-label">Favorite Movie Genre</label>
+                    <select class="form-select" id="favoriteGenre">
+                        <option selected>Choose your favorite genre</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="romance">Romance</option>
+                        <option value="animation">Animation</option>
+                        <option value="thriller">Thriller</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="newsletter" checked>
+                    <label class="form-check-label" for="newsletter">Subscribe to our newsletter for updates on new releases and promotions</label>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">I agree to the <a href="#" class="login-link">Terms of Service</a> and <a href="#" class="login-link">Privacy Policy</a></label>
+                    <div class="invalid-feedback">You must agree to our terms and conditions.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100 mt-3" id="signupButton">Create Account</button>
+
+                <div class="text-center mt-3">
+                    <p>Already have an account? <a href="#" class="login-link">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">CineFlix</h5>
+                    <p class="mb-0">Your ultimate destination for movies. Watch anywhere, anytime.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none login-link">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none login-link">Contact</a></li>
+                        <li><a href="#" class="text-decoration-none login-link">FAQ</a></li>
+                        <li><a href="#" class="text-decoration-none login-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 CineFlix. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signupForm');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const terms = document.getElementById('terms');
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Reset previous error states
+                form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+                
+                let isValid = true;
+                
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    email.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                // Validate username (at least 3 characters)
+                if (username.value.length < 3) {
+                    username.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                // Validate password (at least 8 characters)
+                if (password.value.length < 8) {
+                    password.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                // Check if passwords match
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                // Check if terms are accepted
+                if (!terms.checked) {
+                    terms.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                // If all validations pass
+                if (isValid) {
+                    // Collect form data
+                    const formData = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: email.value,
+                        username: username.value,
+                        password: password.value,
+                        favoriteGenre: document.getElementById('favoriteGenre').value,
+                        newsletter: document.getElementById('newsletter').checked
+                    };
+                    
+                    console.log('User registration data:', formData);
+                    
+                    // Show success message
+                    const successAlert = document.createElement('div');
+                    successAlert.className = 'alert alert-success mt-3';
+                    successAlert.role = 'alert';
+                    successAlert.innerHTML = '<i class="fas fa-check-circle me-2"></i> Account created successfully! Redirecting to home page...';
+                    
+                    form.appendChild(successAlert);
+                    
+                    // In a real application, you would send the data to your server using fetch API
+                    // and handle the response accordingly
+                    
+                    // Simulate redirect after successful signup
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

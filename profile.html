@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlix - Profile</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .profile-header {
+            background-color: rgba(33, 37, 41, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+        
+        .profile-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .profile-card {
+            background-color: rgba(33, 37, 41, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .profile-card-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .movie-item {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+        
+        .movie-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .movie-poster {
+            width: 70px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        
+        .movie-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .movie-info {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-pills .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-pills .nav-link:hover {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: #fff;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        .subscription-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 12px;
+        }
+        
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            color: #fff;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .btn-action {
+            padding: 10px 20px;
+            font-weight: 500;
+        }
+        
+        .movie-rating {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+        
+        .dropdown-menu {
+            background-color: #212529;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .dropdown-menu .dropdown-item {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .dropdown-menu .dropdown-item:hover {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: #fff;
+        }
+        
+        .dropdown-menu .dropdown-item i {
+            width: 20px;
+            text-align: center;
+            margin-right: 8px;
+        }
+        
+        .avatar-dropdown .dropdown-toggle::after {
+            display: none;
+        }
+        
+        .avatar-dropdown .profile-mini-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-film me-2"></i> CineFlix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moviesSection">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#latestSection">Latest Releases</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#categoriesSection">All Categories</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Action</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Drama</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Horror</a></li>
+                            <li><a class="dropdown-item" href="#categoriesSection">Sci-Fi</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search movies...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="ms-3 d-flex align-items-center">
+                    <!-- Profile Dropdown (Logged In State) -->
+                    <div class="dropdown avatar-dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="#" alt="Profile" class="profile-mini-avatar">
+                            <span class="ms-2 d-none d-lg-inline-block">Houma</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-list"></i> Watchlist</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="container py-5">
+        <div class="profile-header">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-3 text-center">
+                    <img src="#" alt="Profile Avatar" class="profile-avatar">
+                </div>
+                <div class="col-lg-6 col-md-5">
+                    <div class="d-flex align-items-center mb-2">
+                        <h2 class="mb-0 me-3">Houma</h2>
+                        <span class="subscription-badge">Premium</span>
+                    </div>
+                    <p class="text-muted mb-1">@Houma</p>
+                    <p class="mb-1">Member since: May 2023</p>
+                    <p>Movie enthusiast and sci-fi lover</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">127</div>
+                            <div class="stat-label">Movies Watched</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">Reviews</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">18</div>
+                            <div class="stat-label">Favorites</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="profile-card">
+                    <h5 class="mb-4">Profile Menu</h5>
+                    <div class="nav flex-column nav-pills">
+                        <a class="nav-link active" href="#overview" data-bs-toggle="pill" data-bs-target="#overview">Overview</a>
+                        <a class="nav-link" href="#watchHistory" data-bs-toggle="pill" data-bs-target="#watchHistory">Watch History</a>
+                        <a class="nav-link" href="#favorites" data-bs-toggle="pill" data-bs-target="#favorites">Favorites</a>
+                        <a class="nav-link" href="#watchlist" data-bs-toggle="pill" data-bs-target="#watchlist">Watchlist</a>
+                        <a class="nav-link" href="#reviews" data-bs-toggle="pill" data-bs-target="#reviews">Reviews</a>
+                        <a class="nav-link" href="#settings" data-bs-toggle="pill" data-bs-target="#settings">Account Settings</a>
+                        <a class="nav-link" href="#subscription" data-bs-toggle="pill" data-bs-target="#subscription">Subscription</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <!-- Overview Section -->
+                    <div class="tab-pane fade show active" id="overview">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="profile-card">
+                                    <div class="profile-card-header">
+                                        <h5 class="mb-0">Recently Watched</h5>
+                                        <a href="#watchHistory" data-bs-toggle="pill" data-bs-target="#watchHistory" class="text-primary">View All</a>
+                                    </div>
+                                    <div class="movie-item">
+                                        <img src="#" alt="Movie Poster" class="movie-poster">
+                                        <div>
+                                            <div class="movie-title">Dune: Part Two</div>
+                                            <div class="movie-info">
+                                                <span>2025</span>
+                                                <span>Sci-Fi</span>
+                                            </div>
+                                            <div class="mt-2">
+                                                <small class="text-muted">Watched 2 days ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-item">
+                                        <img src="#" alt="Movie Poster" class="movie-poster">
+                                        <div>
+                                            <div class="movie-title">The Batman</div>
+                                            <div class="movie-info">
+                                                <span>2022</span>
+                                                <span>Action</span>
+                                            </div>
+                                            <div class="mt-2">
+                                                <small class="text-muted">Watched 5 days ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="profile-card">
+                                    <div class="profile-card-header">
+                                        <h5 class="mb-0">Your Favorites</h5>
+                                        <a href="#favorites" data-bs-toggle="pill" data-bs-target="#favorites" class="text-primary">View All</a>
+                                    </div>
+                                    <div class="movie-item">
+                                        <img src="#" alt="Movie Poster" class="movie-poster">
+                                        <div>
+                                            <div class="movie-title">Inception</div>
+                                            <div class="movie-info">
+                                                <span>2010</span>
+                                                <span>Sci-Fi</span>
+                                            </div>
+                                            <div class="movie-rating mt-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-item">
+                                        <img src="#" alt="Movie Poster" class="movie-poster">
+                                        <div>
+                                            <div class="movie-title">The Shawshank Redemption</div>
+                                            <div class="movie-info">
+                                                <span>1994</span>
+                                                <span>Drama</span>
+                                            </div>
+                                            <div class="movie-rating mt-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="profile-card">
+                                    <div class="profile-card-header">
+                                        <h5 class="mb-0">Recommended For You</h5>
+                                        <a href="#" class="text-primary">See More</a>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-3 col-6">
+                                            <div class="text-center">
+                                                <img src="https://m.media-amazon.com/images/M/MV5BMzZmMjY2NzgtYTM4Zi00OTRlLWI0YjUtZGNhMTc5ZDhlODIyXkEyXkFqcGc@._V1_QL75_UX576_.jpg" alt="Movie Poster" class="img-fluid rounded mb-2">
+                                                <h6 class="mb-1">Gladiator II</h6>
+                                                <small class="text-muted">2025 · Action</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="text-center">
+                                                <img src="https://cdn.mos.cms.futurecdn.net/vU9XMPA6MFZwnrjsXWZQ2A-1200-80.jpg" alt="Movie Poster" class="img-fluid rounded mb-2">
+                                                <h6 class="mb-1">Blade Runner 2099</h6>
+                                                <small class="text-muted">2024 · Sci-Fi</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="text-center">
+                                                <img src="https://m.media-amazon.com/images/M/MV5BMDA0M2YxMjgtMDdhYy00NzFiLWEwNjItZDNjY2UyNjVkNDEzXkEyXkFqcGc@._V1_QL75_UX492_.jpg" alt="Movie Poster" class="img-fluid rounded mb-2">
+                                                <h6 class="mb-1">The Matrix: Resurrections</h6>
+                                                <small class="text-muted">2021 · Sci-Fi</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <div class="text-center">
+                                                <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Movie Poster" class="img-fluid rounded mb-2">
+                                                <h6 class="mb-1">Interstellar</h6>
+                                                <small class="text-muted">2014 · Sci-Fi</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Watch History Section -->
+                    <div class="tab-pane fade" id="watchHistory">
+                        <div class="profile-card">
+                            <div class="profile-card-header">
+                                <h5 class="mb-0">Watch History</h5>
+                                <button class="btn btn-sm btn-outline-danger">Clear History</button>
+                            </div>
+                            <div class="movie-item">
+                                <img src="#" alt="Movie Poster" class="movie-poster">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="movie-title">Dune: Part Two</div>
+                                            <div class="movie-info">
+                                                <span>2025</span>
+                                                <span>Sci-Fi</span>
+                                                <span>2h 37m</span>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">2 days ago</small>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <small class="text-muted">Completed</small>
+                                            <small class="text-primary">Watch Again</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="movie-item">
+                                <img src="#" alt="Movie Poster" class="movie-poster">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="movie-title">The Batman</div>
+                                            <div class="movie-info">
+                                                <span>2022</span>
+                                                <span>Action</span>
+                                                <span>2h 56m</span>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">5 days ago</small>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <small class="text-muted">Completed</small>
+                                            <small class="text-primary">Watch Again</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="movie-item">
+                                <img src="#" alt="Movie Poster" class="movie-poster">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="movie-title">Oppenheimer</div>
+                                            <div class="movie-info">
+                                                <span>2023</span>
+                                                <span>Biography</span>
+                                                <span>3h 01m</span>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">1 week ago</small>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <small class="text-muted">1h 45m / 3h 01m</small>
+                                            <small class="text-primary">Continue Watching</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="movie-item">
+                                <img src="#" alt="Movie Poster" class="movie-poster">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="movie-title">Everything Everywhere All at Once</div>
+                                            <div class="movie-info">
+                                                <span>2022</span>
+                                                <span>Action/Comedy</span>
+                                                <span>2h 19m</span>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">2 weeks ago</small>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <small class="text-muted">Completed</small>
+                                            <small class="text-primary">Watch Again</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Favorites Section -->
+                    <div class="tab-pane fade" id="favorites">
+                        <div class="profile-card">
+                            <div class="profile-card-header">
+                                <h5 class="mb-0">Your Favorites</h5>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-4 col-6">
+                                    <div class="card bg-dark text-white">
+                                        <img src="#" alt="Movie Poster" class="card-img-top">
+                                        <div class="card-body p-3">
+                                            <h6 class="card-title mb-1">Inception</h6>
+                                            <small class="text-muted d-block mb-2">2010 · Sci-Fi</small>
+                                            <div class="text-warning mb-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-sm btn-primary">Watch</button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="card bg-dark text-white">
+                                        <img src="#" alt="Movie Poster" class="card-img-top">
+                                        <div class="card-body p-3">
+                                            <h6 class="card-title mb-1">The Shawshank Redemption</h6>
+                                            <small class="text-muted d-block mb-2">1994 · Drama</small>
+                                            <div class="text-warning mb-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-sm btn-primary">Watch</button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="card bg-dark text-white">
+                                        <img src="#" alt="Movie Poster" class="card-img-top">
+                                        <div class="card-body p-3">
+                                            <h6 class="card-title mb-1">The Dark Knight</h6>
+                                            <small class="text-muted d-block mb-2">2008 · Action</small>
+                                            <div class="text-warning mb-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-sm btn-primary">Watch</button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="card bg-dark text-white">
+                                        <img src="#" alt="Movie Poster" class="card-img-top">
+                                        <div class="card-body p-3">
+                                            <h6 class="card-title mb-1">Pulp Fiction</h6>
+                                            <small class="text-muted d-block mb-2">1994 · Crime</small>
+                                            <div class="text-warning mb-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                
